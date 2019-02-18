@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body onload="init()">
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    <H1>A short demo of my ESCPOS printing in pure Javascript</H1>
+    <HR>
+    <select id="printerlist"></select>&nbsp;&nbsp;&nbsp;This will show all shared printers on Windows and all LP on Linux
+    <HR>
+    <input type="submit" class="menuebuttons" value="Print some text" onclick="Test_print()"/>
+    <p>
+    <input type="submit" class="menuebuttons" value="Print an Image" onclick="Test_Imageprint()"/>
+    <p>
+    <input type="submit" class="menuebuttons" value="Print a Barcode" onclick="Test_barcode()"/>
+    <p>
+    <input type="submit" class="menuebuttons" value="Print a QR-Code" onclick="Test_qrcode()"/>
+    <p>
+    
+    <input type="submit" class="menuebuttons" value="Print Full Demo" onclick="Test_Full()"/>
+    <p> 
+<input type="submit" class="menuebuttons" value="Cut" onclick="test_cut()"/>
+    <p>
+
+    
+    <div id ="Ausgabe">
+    </div>
+   <script src = './wrapper.js'></script>
+   <script src = './renderer.js'></script>  
+  </body>
+</html>
